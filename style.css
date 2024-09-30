@@ -87,14 +87,13 @@ body{
 	color: #1A76D1;
 	font-size: 15px;
 }
-.pro-features .button{}
 .pro-features .button .btn {
 	width: 100%;
 	text-align: center;
 	margin-top: 8px;
 	display: inline-block;
 	float: left;
-	font-size: 13px;
+	font-size: 20px;
 	width: 100%;
 	text-transform: capitalize;
 }
