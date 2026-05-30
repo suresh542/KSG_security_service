@@ -8,7 +8,7 @@ export default function Team() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
-            <div className="inline-flex items-center gap-2 text-cyber-green text-sm font-body font-semibold uppercase tracking-widest">
+            <div className="inline-flex items-center gap-2 text-cyber-green text-lg sm:text-xl lg:text-2xl xl:text-3xl font-body font-semibold uppercase tracking-widest">
               <span className="w-8 h-0.5 bg-cyber-green" /> Our Experts
             </div>
             <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight">

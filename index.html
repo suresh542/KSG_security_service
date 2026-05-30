@@ -5,13 +5,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- Favicon -->
-  <link
-    id="favicon"
-    rel="icon"
-    type="image/png"
-    href="/headerLogo.png"
-  />
+<link
+  id="favicon"
+  rel="icon"
+  type="image/png"
+  href="/headerLogo.png"
+/>
 
   <title>KSG Security Service</title>
 
@@ -30,25 +29,23 @@
   <script type="module" src="/src/main.jsx"></script>
 
   <script>
-    const favicon = document.getElementById("favicon");
+  function updateFavicon() {
+    const favicon = document.querySelector("#favicon");
+    const isDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
 
-    function setFavicon() {
-      const isDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    favicon.href = isDark
+      ? "/metalogoDark.png"
+      : "/headerLogo.png";
+  }
 
-      favicon.setAttribute(
-        "href",
-        isDark ? "/metalogoDark.png" : "/headerLogo.png"
-      );
-    }
+  // Initial load
+  updateFavicon();
 
-    // Initial load
-    setFavicon();
-
-    // Listen for theme changes
-    window
-      .matchMedia("(prefers-color-scheme: dark)")
-      .addEventListener("change", setFavicon);
-  </script>
+  // Listen for theme changes
+  window
+    .matchMedia("(prefers-color-scheme: dark)")
+    .addEventListener("change", updateFavicon);
+</script>
 </body>
 
 </html>

@@ -1,4 +1,8 @@
 import { Lock, Eye, Shield, Database, Globe, Cpu, Twitter, Linkedin, Facebook, Instagram, Youtube } from 'lucide-react'
+import ServiceImg1 from './images/ServiceImg1.png'
+import ServiceImg2  from './images/ServiceImg2.png'
+import ServiceImg3  from './images/ServiceImg3.png'
+import ServiceImg4  from './images/ServiceImg4.jpg'
 
 export const STATS = [
   { number: '20+', label: 'Top Companies' },
@@ -12,25 +16,25 @@ export const SERVICES = [
     icon: Lock,
     title: 'Experienced & Trained Security Guards',
     desc: 'Our security guards are carefully selected, professionally trained, and highly experienced in handling a wide range of security responsibilities. They are skilled in access control, visitor management, patrolling, incident reporting, and emergency handling. With a strong focus on discipline, professionalism, and customer service, our guards ensure a safe and secure environment for your business, employees, and visitors',
-    img: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?w=400&h=250&fit=crop',
+    img: ServiceImg1,
   },
   {
     icon: Eye,
     title: '24/7 Security Monitoring Support',
     desc: 'We provide reliable 24/7 security monitoring services to ensure continuous protection for your property and operations. Our dedicated support team actively monitors security activities, responds to alerts, and coordinates immediate action whenever required. Whether during the day or night, we remain committed to keeping your premises secure at all times.',
-    img: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=250&fit=crop',
+    img: ServiceImg2,
   },
   {
     icon: Shield,
     title: 'Flexible Security Solutions',
     desc: 'Every business has unique security needs, which is why we offer customized and flexible security solutions. From small offices to large industrial facilities, we design security plans that match your operational requirements, risk level, and budget while ensuring maximum protection and efficiency.',
-    img: 'https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=400&h=250&fit=crop',
+    img: ServiceImg3,
   },
   {
     icon: Database,
     title: 'Security Guard Supply Services',
     desc: 'We provide trained and licensed security guards for offices, commercial buildings, factories, warehouses, residential communities, educational institutions, hospitals, construction sites, and events. Our guards are trained to maintain safety, monitor activities, control access, and respond effectively to security incidents, ensuring complete peace of mind for our clients.',
-    img: 'https://images.unsplash.com/photo-1614064641938-3bbee52942c7?w=400&h=250&fit=crop',
+    img: ServiceImg4,
   },
   {
     icon: Globe,
@@ -102,7 +106,6 @@ export const STATS_BAR = [
 
 export const SOCIAL = [
   { icon: Twitter, label: 'Twitter', href: '#' },
-  { icon: Linkedin, label: 'LinkedIn', href: '#' },
   { icon: Facebook, label: 'Facebook', href: '#' },
   { icon: Instagram, label: 'Instagram', href: '#' },
   { icon: Youtube, label: 'YouTube', href: '#' },

@@ -2,6 +2,8 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Shield, ChevronRight, Mail, Phone, MapPin } from 'lucide-react'
 import { SOCIAL, FOOTER_LINKS } from './data'
+import headerLogo from './images/headerLogo.png'
+
 
 export default function Footer() {
   const [formData, setFormData] = useState({
@@ -43,17 +45,15 @@ export default function Footer() {
   }
 
   return (
-    <footer id="contact" className="bg-white border-t border-gray-200 transition-colors">
+    <footer id="contact" className="!bg-white dark:!bg-[#0d1b2e] border-t border-gray-200 transition-colors">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-<div className="grid grid-cols-1 gap-10 mb-12">
-          <div className="space-y-10">
+        <div className="grid grid-cols-1 gap-10 mb-12">
+          {/* <div className="space-y-10 flex">
             <div className="space-y-5">
-              <Link to="/" className="flex items-center gap-2">
-                <div className="w-9 h-9 rounded-lg bg-slate-900/10 flex items-center justify-center">
-                  <Shield className="w-5 h-5 text-slate-900" />
-                </div>
-                <span className="font-display text-xl font-bold text-slate-900 transition-colors">
-                  Cy<span className="gradient-text">bal</span>
+              <Link to="/" className="flex items-center gap-0">
+                <img src={headerLogo} alt="Logo" className="w-auto h-10 pe-3" />
+                <span className="font-display text-lg text-black dark:text-white font-bold text-slate-900 transition-colors">
+                  KSG <span className="gradient-text">security</span>
                 </span>
               </Link>
               <p className="font-body text-slate-700 text-sm leading-relaxed transition-colors">
@@ -103,11 +103,86 @@ export default function Footer() {
                 </div>
               ))}
             </div>
+          </div> */}
+          <div className="flex flex-col lg:flex-row justify-between gap-12">
+            {/* Left Section */}
+            <div className="max-w-md space-y-5">
+              <Link to="/" className="flex items-center gap-0">
+                <img
+                  src={headerLogo}
+                  alt="Logo"
+                  className="w-auto h-10 pe-3"
+                />
+                <span className="font-display text-lg font-bold text-slate-900 dark:text-white">
+                  KSG <span className="gradient-text">security</span>
+                </span>
+              </Link>
+
+              <p className="font-body text-gray-700 dark:text-white text-sm leading-relaxed">
+                Your trusted partner in enterprise cybersecurity. Protecting businesses
+                with next-generation security solutions.
+              </p>
+
+              <div className="flex gap-3 flex-wrap">
+                {SOCIAL.map(({ icon: Icon, label }) => (
+                  <a
+                    key={label}
+                    href="#"
+                    aria-label={label}
+                    className="w-9 h-9 rounded-lg bg-slate-100 border border-gray-200 hover:border-slate-400 flex items-center justify-center text-slate-700 hover:text-slate-900 transition-all"
+                  >
+                    <Icon className="w-4 h-4" />
+                  </a>
+                ))}
+              </div>
+
+              <div className="space-y-2 ">
+                <div className="flex items-center gap-2  text-sm text-gray-700 dark:text-white">
+                  <Mail className="w-4 h-4  flex-shrink-0 text-gray-700 dark:text-white " />
+                  ksgsantharaj@gmail.com
+                </div>
+
+                <div className="flex items-center gap-2  text-sm text-gray-700 dark:text-white">
+                  <Phone className="w-4 h-4  flex-shrink-0 text-gray-700 dark:text-white" />
+                  +91 6379191157
+                </div>
+
+                <div className="flex items-center gap-2 text-gray-700 dark:text-white text-sm">
+                  <MapPin className="w-4 h-4 text-gray-700 dark:text-white flex-shrink-0" />
+                  Krishnagiri, Tamil Nadu 635001, India
+                </div>
+              </div>
+            </div>
+
+            {/* Right Section */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 flex-1">
+              {Object.entries(FOOTER_LINKS).map(([group, links]) => (
+                <div key={group}>
+                  <h4 className="font-body font-bold text-slate-900 dark:text-slate-300 mb-5 ">
+                    {group}
+                  </h4>
+
+                  <ul className="space-y-3">
+                    {links.map((link) => (
+                      <li key={link}>
+                        <a
+                          href="#"
+                          className="font-body text-gray-700 dark:text-white text-sm hover:text-slate-900 transition-colors inline-flex items-center gap-1 hover:gap-2"
+                        >
+                          <ChevronRight className="w-3 h-3" />
+                          {link}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
 
         <div className="border-t border-gray-200 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 transition-colors">
-          <p className="font-body text-slate-600 text-sm transition-colors">
+          <p className="font-body text-gray-700 dark:text-white text-sm transition-colors">
             © {new Date().getFullYear()} Cybal. All Rights Reserved.
           </p>
           <div className="flex flex-wrap gap-4 sm:gap-6 justify-center">
@@ -115,7 +190,7 @@ export default function Footer() {
               <a
                 key={item}
                 href="#"
-                className="font-body text-slate-600 text-sm hover:text-slate-900 transition-colors"
+                className="font-body text-gray-700 dark:text-white text-sm hover:text-slate-900 transition-colors"
               >
                 {item}
               </a>

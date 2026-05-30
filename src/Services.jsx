@@ -9,11 +9,11 @@ export default function Services() {
           <div className="inline-flex items-center gap-2 text-cyber-green text-lg sm:text-xl lg:text-2xl xl:text-3xl font-body font-semibold uppercase tracking-widest">
             <span className="w-8 h-0.5 bg-cyber-green" /> What We Do
           </div>
-          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-white">
+          <h2 className="font-display text-3xl text-dark dark:!text-white sm:text-4xl lg:text-5xl font-bold">
             What We Do For Your<br />
             <span className="gradient-text">Security Service</span>
           </h2>
-          <p className="font-body text-gray-400 max-w-2xl mx-auto">
+          <p className="font-body text-gray-400  max-w-2xl mx-auto">
             Providing professional security guard services since 2010 across
             Krishnagiri, Hosur, Denkanikottai, Dharmapuri, and Palacode.
             We deliver reliable manpower solutions with trained security personnel
