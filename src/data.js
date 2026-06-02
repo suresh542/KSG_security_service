@@ -101,11 +101,10 @@ export const STATS_BAR = [
 ]
 
 export const SOCIAL = [
-  { icon: Twitter, label: 'Twitter', href: '#' },
-  { icon: Linkedin, label: 'LinkedIn', href: '#' },
-  { icon: Facebook, label: 'Facebook', href: '#' },
   { icon: Instagram, label: 'Instagram', href: '#' },
+  { icon: Facebook, label: 'Facebook', href: '#' },
   { icon: Youtube, label: 'YouTube', href: '#' },
+  { icon: Linkedin, label: 'LinkedIn', href: '#' },
 ]
 
 export const FOOTER_LINKS = {
