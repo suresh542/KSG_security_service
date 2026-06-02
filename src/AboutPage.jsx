@@ -78,26 +78,21 @@ const VALUES = [
 ]
 export default function AboutPage() {
   return (
-    <div className="pt-20 bg-[#0a0e1a] text-white">
+    <div className="">
 
       {/* Hero */}
-      <section className="relative py-24 lg:py-32 section-bg hexagon-bg overflow-hidden">
-        <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-cyber-green/5 rounded-full blur-3xl animate-pulse" />
-          <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-blue-500/8 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
-        </div>
+      <section className="relative py-24 lg:py-32 bg-white dark:bg-[#0d1b2e] overflow-hidden">
+
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
-          {/* <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-cyber-green/30 bg-cyber-green/5 text-cyber-green text-sm font-body mb-6">
-            <span className="w-2 h-2 bg-cyber-green rounded-full animate-pulse" /> About Cybal
-          </div> */}
+
           <h1 className="font-display text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-gray-900 dark:text-white leading-tight mb-6">
             Trusted Security Service Company<br />
             <span className="gradient-text glow-text"> Since 2010</span>
           </h1>
           <p className="font-body text-gray-700 dark:text-gray-400 text-lg max-w-3xl mx-auto leading-relaxed mb-10">
-Established in 2010, we are one of the trusted security service providers serving businesses across Krishnagiri District and surrounding regions. We specialize in supplying and maintaining professional security guards for industries, hospitals, hotels, restaurants, commercial establishments, and service centers. <br />
-<br />
- With years of industry experience, we understand the importance of safety, discipline, punctuality, and professional conduct in security services. Our team is committed to providing dependable manpower solutions tailored to each client’s requirements.
+            Established in 2010, we are one of the trusted security service providers serving businesses across Krishnagiri District and surrounding regions. We specialize in supplying and maintaining professional security guards for industries, hospitals, hotels, restaurants, commercial establishments, and service centers. <br />
+            <br />
+            With years of industry experience, we understand the importance of safety, discipline, punctuality, and professional conduct in security services. Our team is committed to providing dependable manpower solutions tailored to each client’s requirements.
 
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -130,7 +125,7 @@ Established in 2010, we are one of the trusted security service providers servin
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             <div className="space-y-6">
-              <div className="inline-flex items-center gap-2 text-cyber-green text-sm font-body font-semibold uppercase tracking-widest">
+              <div className="inline-flex items-center gap-2 text-cyber-green text-lg sm:text-xl lg:text-2xl xl:text-3xl font-body font-semibold uppercase tracking-widest">
                 <span className="w-8 h-0.5 bg-cyber-green" /> Our Mission
               </div>
               <h2 className="font-display text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white leading-tight">
@@ -138,14 +133,14 @@ Established in 2010, we are one of the trusted security service providers servin
                 <span className="gradient-text">Your Business.</span>
               </h2>
               <p className="font-body text-gray-700 dark:text-gray-400 leading-relaxed">
-To become the most trusted and respected security service provider in the region through quality service, discipline, and customer satisfaction.
+                To become the most trusted and respected security service provider in the region through quality service, discipline, and customer satisfaction.
               </p>
               <div className="space-y-3">
-                {[`Strict Access Control & Site Entry Management`,`Real-Time Guard Monitoring & Supervision System`,`Trained & Verified Security Personnel Available 24/7`,`Compliance with Safety Rules & Client Security Standards,Regular Patrolling`, `Inspection & Risk Prevention Services`
-].map(item => (
-                  <div key={item} className="flex items-center gap-3 text-gray-300 font-body text-sm">
+                {[`Strict Access Control & Site Entry Management`, `Real-Time Guard Monitoring & Supervision System`, `Trained & Verified Security Personnel Available 24/7`, `Compliance with Safety Rules & Client Security Standards,Regular Patrolling`, `Inspection & Risk Prevention Services`
+                ].map(item => (
+                  <div key={item} className="flex items-center gap-3 text-gray-600 dark:text-gray-200 font-body text-sm">
                     <div className="flex-shrink-0 w-5 h-5 rounded-full bg-cyber-green/20 border border-cyber-green/40 flex items-center justify-center">
-                      <Check className="w-3 h-3 text-cyber-green" />
+                      <Check className="w-3 h-3 text-gray-600 dark:text-gray-400" />
                     </div>
                     {item}
                   </div>
@@ -170,7 +165,7 @@ To become the most trusted and respected security service provider in the region
       <section className="py-20 lg:py-28 section-bg hexagon-bg">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16 space-y-4">
-            <div className="inline-flex items-center gap-2 text-cyber-green text-sm font-body font-semibold uppercase tracking-widest">
+            <div className="inline-flex items-center gap-2 text-cyber-green text-lg sm:text-xl lg:text-2xl xl:text-3xl font-body font-semibold uppercase tracking-widest">
               <span className="w-8 h-0.5 bg-cyber-green" /> Core Values
             </div>
             <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white">
@@ -196,7 +191,7 @@ To become the most trusted and respected security service provider in the region
       <section className="py-20 lg:py-28 green-section">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16 space-y-4">
-            <div className="inline-flex items-center gap-2 text-cyber-green text-sm font-body font-semibold uppercase tracking-widest">
+            <div className="inline-flex items-center gap-2 text-cyber-green text-lg sm:text-xl lg:text-2xl xl:text-3xl font-body font-semibold uppercase tracking-widest">
               <span className="w-8 h-0.5 bg-cyber-green" /> Our Journey
             </div>
             <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white">

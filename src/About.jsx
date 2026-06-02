@@ -30,10 +30,10 @@ export default function About() {
             <div className="inline-flex items-center gap-2 text-cyber-green text-lg sm:text-xl lg:text-2xl xl:text-3xl font-body font-semibold uppercase tracking-widest">
               <span className="w-8 h-0.5 bg-cyber-green" /> About Us
             </div>
-            <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-white dark:text-gray-300 leading-tight">
+            <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-600 dark:text-gray-200 leading-tight">
              <span className=" text-xl sm:text-2xl lg:text-3xl xl:text-4xl"> Professional Security Services </span><br /><span className="gradient-text"> You Can Trust </span>
             </h2>
-            <p className="font-body text-gray-400 leading-relaxed ">
+            <p className="font-body text-gray-700 dark:text-gray-300 leading-relaxed ">
 With over 15+ years of experience in the security service industry, we provide dependable and trained security personnel for businesses of all sizes.
 <br /> <br />
 Our security personnel are professionally trained in surveillance, access control, emergency response, fire safety, and conflict management. We ensure every guard is disciplined, alert, and prepared to handle any situation effectively.

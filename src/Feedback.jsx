@@ -32,7 +32,7 @@ export default function Feedback() {
           <div className="inline-flex items-center gap-2 text-cyber-green text-lg sm:text-xl lg:text-2xl xl:text-3xl font-body font-semibold uppercase tracking-widest">
             <span className="w-8 h-0.5 bg-cyber-green" /> Testimonials
           </div>
-          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-white">
+          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-600 dark:text-gray-300 leading-tight">
             Take A Look Our Top<br />
             <span className="gradient-text">Customer Feedback</span>
           </h2>

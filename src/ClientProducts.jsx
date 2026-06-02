@@ -10,7 +10,7 @@ export default function ClientProducts() {
           <div className="inline-flex items-center gap-2 text-cyber-green text-lg sm:text-xl lg:text-2xl xl:text-3xl font-body font-semibold uppercase tracking-widest">
             <span className="w-8 h-0.5 bg-cyber-green" /> Happiest Clients
           </div>
-          <h2 className="font-display text-lg sm:text-xl lg:text-2xl text-white">
+          <h2 className="font-display text-lg sm:text-xl lg:text-2xl text-gray-600 dark:text-gray-300">
            Providing Professional Security Services Across Industries, Trusted for Reliable and Professional Security Solutions Since 2010
           </h2>
         </div>

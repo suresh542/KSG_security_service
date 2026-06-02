@@ -1,4 +1,5 @@
 import { Award, Check } from 'lucide-react'
+import ourCapImg from './images/ourCapImg.jpg'
 
 export default function AboutTwo() {
   return (
@@ -15,7 +16,7 @@ export default function AboutTwo() {
               This Is 24/7 Cyber Security{' '}
               <span className="gradient-text">Operation Centre</span> For Your Problem Solution.
             </h2> */}
-            <p className="font-body text-md sm:text-md lg:text-lg xl:text-xl text-gray-400 leading-relaxed">
+            <p className="font-body text-md sm:text-md lg:text-lg xl:text-xl text-gray-600 dark:text-gray-300 leading-relaxed">
               We provide trained, disciplined, and professional security guards for factories, hospitals, hotels, warehouses, offices, retail shops, and residential communities. Since 2010, we have been delivering reliable security services across Krishnagiri, Hosur, Denkanikottai, Dharmapuri, and Palacode with a strong focus on safety, discipline, and client satisfaction.
             </p>
 
@@ -40,7 +41,7 @@ export default function AboutTwo() {
                     <span className="text-blue-600 font-bold text-lg">✓</span>
                   </div>
 
-                  <p className="text-gray-700 text-lg sm:text-base leading-relaxed font-large">
+                  <p className="text-gray-700 dark:text-gray-300 text-lg sm:text-base leading-relaxed font-large">
                     {item}
                   </p>
                 </li>
@@ -53,7 +54,7 @@ export default function AboutTwo() {
           <div className="relative order-1 lg:order-2">
             <div className="relative overflow-hidden rounded-2xl">
               <img
-                src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=600&h=450&fit=crop"
+                src={ourCapImg}
                 alt="Cyber Security Team"
                 className="w-full h-auto object-cover rounded-2xl"
               />

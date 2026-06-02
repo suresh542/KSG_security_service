@@ -67,7 +67,7 @@ export default function Contact() {
                 </div>
 
                 <div className="flex justify-center">
-                    <div className="w-full max-w-4xl">
+                    <div className="w-full max-w-3xl">
                         <div className="rounded-[2rem] border border-gray-200 dark:border-white/10 bg-gray-50 dark:bg-[#0d1b2e]/80 p-6 sm:p-8 shadow-sm transition-colors">
                             <form onSubmit={handleSubmit} className="space-y-5">
 
@@ -103,7 +103,7 @@ export default function Contact() {
                                         onChange={handleChange}
                                         placeholder="Describe your business or security needs"
                                         required
-                                        className="mt-2 w-full rounded-2xl border border-gray-300 !bg-white px-4 py-3 text-sm text-gray-900 outline-none transition-colors focus:border-cyber-green focus:ring-2 focus:ring-cyber-green/20 dark:border-gray-700 dark:bg-[#111827] dark:text-gray-100"
+                                        className="mt-2 w-full rounded-2xl border border-gray-300 !bg-white dark:!bg-transparent px-4 py-3 text-sm text-gray-900 outline-none transition-colors focus:border-cyber-green focus:ring-2 focus:ring-cyber-green/20 dark:border-gray-700 dark:bg-[#111827] dark:text-gray-100"
                                     />
                                 </label>
 
@@ -122,13 +122,15 @@ export default function Contact() {
                                     />
                                 </label>
 
-                                <button
-                                    type="submit"
-                                    disabled={status.submitting}
-                                    className="inline-flex w-full items-center justify-center rounded-full bg-gradient-to-r from-cyber-green to-blue-400 px-6 py-3 text-sm font-semibold text-[#0a0e1a] transition-all hover:brightness-110 disabled:cursor-not-allowed disabled:opacity-70"
-                                >
-                                    {status.submitting ? 'Sending...' : 'Submit'}
-                                </button>
+                                <div className="flex justify-center">
+                                    <button
+                                        type="submit"
+                                        disabled={status.submitting}
+                                        className="inline-flex w-full max-w-md items-center justify-center rounded-full bg-gradient-to-r from-cyber-green to-blue-400 px-6 py-3 text-lg font-semibold text-[#0a0e1a] transition-all hover:brightness-110 disabled:cursor-not-allowed disabled:opacity-70"
+                                    >
+                                        {status.submitting ? 'Sending...' : 'Submit'}
+                                    </button>
+                                </div>
 
                                 {status.message && (
                                     <p className="text-sm text-green-600 dark:text-green-300">

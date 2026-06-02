@@ -1,10 +1,24 @@
 import { Lock, Eye, Shield, Database, Globe, Cpu, Twitter, Linkedin, Facebook, Instagram, Youtube } from 'lucide-react'
+import ServicesImg1 from './images/ServiceImg1.jpg';
+import ServicesImg2 from './images/ServiceImg2.png';
+import ServicesImg3 from './images/ServiceImg3.png';
+import ServicesImg4 from './images/ServiceImg4.png';
+import ServicesImg5 from './images/ServiceImg5.png';
+import ServicesImg6 from './images/ServiceImg6.jpg';
+import Client1 from './images/Client1.png';
+import Client2 from './images/Client2.jpg';
+import Client3 from './images/Client3.jpg';
+import Client4 from './images/Client5.jpg';
+import Client5 from './images/Client5.jpg';
+import Client6 from './images/Client6.jpg';
+import Client7 from './images/Client7.jpg';
+import Client8 from './images/Client3.jpg';
 
 export const STATS = [
-  { number: '20+', label: 'Top Companies' },
-  { number: '100+', label: 'Customer Satisfactions' },
-  { number: '200+', label: 'Total Work Done' },
-  { number: '200+', label: 'Happy Staff' },
+  { number: '45+', label: 'Top Companies' },
+  { number: '500+', label: 'Customer Satisfactions' },
+  { number: '200+', label: 'Specialized Duties' },
+  { number: '100+', label: 'Happy Staff' },
 ]
 
 export const SERVICES = [
@@ -12,49 +26,49 @@ export const SERVICES = [
     icon: Lock,
     title: 'Experienced & Trained Security Guards',
     desc: 'Our security guards are carefully selected, professionally trained, and highly experienced in handling a wide range of security responsibilities. They are skilled in access control, visitor management, patrolling, incident reporting, and emergency handling. With a strong focus on discipline, professionalism, and customer service, our guards ensure a safe and secure environment for your business, employees, and visitors',
-    img: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?w=400&h=250&fit=crop',
+    img: ServicesImg1,
   },
   {
     icon: Eye,
     title: '24/7 Security Monitoring Support',
     desc: 'We provide reliable 24/7 security monitoring services to ensure continuous protection for your property and operations. Our dedicated support team actively monitors security activities, responds to alerts, and coordinates immediate action whenever required. Whether during the day or night, we remain committed to keeping your premises secure at all times.',
-    img: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=250&fit=crop',
+    img: ServicesImg2,
   },
   {
     icon: Shield,
-    title: 'Flexible Security Solutions',
+    title: 'Flexible Security Guards for All Industries',
     desc: 'Every business has unique security needs, which is why we offer customized and flexible security solutions. From small offices to large industrial facilities, we design security plans that match your operational requirements, risk level, and budget while ensuring maximum protection and efficiency.',
-    img: 'https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=400&h=250&fit=crop',
+    img: ServicesImg3,
   },
   {
     icon: Database,
     title: 'Security Guard Supply Services',
     desc: 'We provide trained and licensed security guards for offices, commercial buildings, factories, warehouses, residential communities, educational institutions, hospitals, construction sites, and events. Our guards are trained to maintain safety, monitor activities, control access, and respond effectively to security incidents, ensuring complete peace of mind for our clients.',
-    img: 'https://images.unsplash.com/photo-1614064641938-3bbee52942c7?w=400&h=250&fit=crop',
+    img: ServicesImg4,
   },
   {
     icon: Globe,
     title: 'Professional Uniformed Staff',
     desc: 'Our security personnel maintain a professional appearance and conduct themselves with discipline and courtesy at all times. Properly uniformed and trained in communication and workplace ethics, our staff create a strong security presence while representing your organization in a respectful and professional manner.',
-    img: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=400&h=250&fit=crop',
+    img: ServicesImg5,
   },
   {
     icon: Cpu,
     title: 'Trusted by Leading Businesses',
     desc: 'Over the years, we have built strong relationships with clients through our commitment to reliability, professionalism, and consistent service quality. Many leading businesses trust us for their security needs because of our proven track record, experienced team, and dedication to client satisfaction.',
-    img: 'https://images.unsplash.com/photo-1510511459019-5dda7724fd87?w=400&h=250&fit=crop',
+    img: ServicesImg6,
   },
 ]
 
 export const CLIENTS_PRODUCTS = [
-  { title: 'TATA Electronics', category: 'Industrial Security Services', img: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=400&h=280&fit=crop' },
-  { title: 'TCR Hospital', category: 'Medical Facility Security', img: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=400&h=280&fit=crop' },
-  { title: 'Ashok Leyland Service Center', category: 'Commercial & Service Center Security', img: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&h=280&fit=crop' },
-  { title: 'Bakery Delight', category: 'Retail Shop Security', img: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=400&h=280&fit=crop' },
-  { title: 'KFC', category: 'Food Court & Commercial Security', img: 'https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?w=400&h=280&fit=crop' },
-  { title: 'ARK Hospital', category: 'Healthcare Security Services', img: 'https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?w=400&h=280&fit=crop' },
-  { title: 'RK Hospital', category: 'Hospital Security Management', img: 'https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=400&h=280&fit=crop' },
-  { title: 'RR Biriyani', category: 'Restaurant & Hospitality Security', img: 'https://images.unsplash.com/photo-1614064641938-3bbee52942c7?w=400&h=280&fit=crop' },
+  { title: 'TATA Electronics', category: 'Industrial Security Services', img: Client1 },
+  { title: 'TCR Hospital', category: 'Medical Facility Security', img: Client2 },
+  { title: 'Ashok Leyland Service Center', category: 'Commercial & Service Center Security', img: Client3 },
+  { title: 'Bakery Delight', category: 'Retail Shop Security', img: Client4 },
+  { title: 'KFC', category: 'Food Court & Commercial Security', img: Client5 },
+  { title: 'ARK Hospital', category: 'Healthcare Security Services', img: Client6 },
+  { title: 'RK Hospital', category: 'Hospital Security Management', img: Client7 },
+  { title: 'RR Biriyani', category: 'Restaurant & Hospitality Security', img: Client8 },
 ]
 
 

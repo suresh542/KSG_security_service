@@ -8,14 +8,14 @@ export default function Team() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
-            <div className="inline-flex items-center gap-2 text-cyber-green text-sm font-body font-semibold uppercase tracking-widest">
+            <div className="inline-flex items-center gap-2 text-cyber-green text-lg sm:text-xl lg:text-2xl xl:text-3xl font-body font-semibold uppercase tracking-widest">
               <span className="w-8 h-0.5 bg-cyber-green" /> Our Experts
             </div>
-            <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight">
+            <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-600 dark:text-gray-300 leading-tight">
               Our Experts Team Member For{' '}
               <span className="gradient-text">Your Solution</span>
             </h2>
-            <p className="font-body text-gray-400 leading-relaxed">
+            <p className="font-body text-gray-600 dark:text-gray-300 leading-relaxed">
               Our team comprises battle-tested cybersecurity veterans with decades of combined experience defending organizations from the world's most sophisticated threats.
             </p>
             <Link to="/about" className="inline-flex items-center gap-2 px-8 py-4 rounded-lg font-body font-semibold text-[#0a0e1a] bg-gradient-to-r from-cyber-green to-blue-400 hover:scale-105 transition-all glow-green">
