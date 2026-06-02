@@ -1,6 +1,7 @@
 import { Shield, Target, Award, Users, Zap, Globe, ArrowRight, Check } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import { TEAM, STATS } from './data'
+import missionImg from './images/ServiceImg4.png'
 
 const MILESTONES = [
   {
@@ -99,7 +100,7 @@ export default function AboutPage() {
             <Link to="/contact" className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-lg font-body font-semibold text-[#0a0e1a] bg-gradient-to-r from-cyber-green to-blue-400 hover:scale-105 transition-all glow-green">
               Work With Us <ArrowRight className="w-5 h-5" />
             </Link>
-            <Link to="/services" className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-lg font-body font-semibold text-white border border-white/20 hover:border-cyber-green/50 hover:bg-cyber-green/5 transition-all">
+            <Link to="/services" className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-lg font-body font-semibold text-[#0a0e1a] dark:text-white border border-[#0d1b2e] dark:border-white/20 hover:border-cyber-green/50 hover:bg-cyber-green/5 transition-all">
               Our Services
             </Link>
           </div>
@@ -149,7 +150,7 @@ export default function AboutPage() {
             </div>
             <div className="relative">
               <div className="relative overflow-hidden rounded-2xl">
-                <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=450&fit=crop" alt="Mission" className="w-full h-auto rounded-2xl object-cover" />
+                <img src={missionImg} alt="Mission" className="w-full h-auto object-cover" />
                 <div className="absolute inset-0 bg-gradient-to-tr from-cyber-green/20 to-transparent rounded-2xl" />
               </div>
               <div className="absolute -bottom-6 -right-6 stat-card rounded-xl p-4 backdrop-blur-sm">

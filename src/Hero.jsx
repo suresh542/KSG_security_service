@@ -17,23 +17,23 @@ export default function Hero() {
 
           {/* Left */}
           <div className="space-y-8">
-           
+
             <h1 className="font-display text-xl sm:text-2xl lg:text-4xl xl:text-3xl font-bold text-gray-900 dark:text-white leading-tight font-family: 'tamil', serif transition-colors">
               Trusted Security Guard Services for {' '}
               <span className="gradient-text glow-text">Since 2010</span>
-              
+
             </h1>
             <p className="font-body text-gray-700 dark:text-gray-400 text-base lg:text-lg max-w-xl leading-relaxed transition-colors">
-Professional manpower security solutions for industries, hospitals, hotels, retail stores, commercial buildings, and service centers across Krishnagiri District.
+              Professional manpower security solutions for industries, hospitals, hotels, retail stores, commercial buildings, and service centers across Krishnagiri District.
             </p>
             <p className="font-body text-gray-700 dark:text-gray-400 text-base lg:text-lg max-w-xl leading-relaxed transition-colors">
-We specialize in supplying and maintaining highly trained security guards with a strong focus on safety, discipline, monitoring, and quick response services. Our experienced team ensures reliable protection for your people, property, and business operations 24/7.
+              We specialize in supplying and maintaining highly trained security guards with a strong focus on safety, discipline, monitoring, and quick response services. Our experienced team ensures reliable protection for your people, property, and business operations 24/7.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <a href="#services-section" className="inline-flex items-center border border-gray-200 bg-white dark:bg-[#0d1b2e] justify-center gap-2 px-8 py-4 rounded-lg font-body font-semibold text-[#0a0e1a] dark:text-white hover:scale-105 transition-all glow-green">
+              <a href="#services-section" className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-lg font-body font-semibold text-[#0a0e1a] bg-gradient-to-r from-cyber-green to-blue-400 hover:scale-105 transition-all glow-green">
                 Discover More <ChevronRight className="w-5 h-5" />
               </a>
-              <a href="#about-section" className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-lg font-body font-semibold text-gray-900 dark:text-white border border-gray-400 dark:border-white/20 hover:border-cyber-green/50 transition-all">
+              <a href="#about-section" className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-lg font-body font-semibold text-gray-900 dark:text-white border border-gray-500 dark:border-white/20 hover:border-cyber-green/50 transition-all">
                 <Play className="w-5 h-5 text-cyber-green" /> Video Tour
               </a>
             </div>
@@ -56,7 +56,7 @@ We specialize in supplying and maintaining highly trained security guards with a
                 <div key={label} className={`absolute ${pos} animate-float`} style={{ animationDelay: delay }}>
                   <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white dark:bg-[#0d1b2e]/90 border border-cyber-green/30 backdrop-blur-sm transition-colors">
                     <Icon className="w-3 h-3 text-cyber-green" />
-                    <span className="text-xs text-gray-900 dark:text-white font-body transition-colors">{label}</span> 
+                    <span className="text-xs text-gray-900 dark:text-white font-body transition-colors">{label}</span>
                   </div>
                 </div>
               ))}
@@ -66,13 +66,13 @@ We specialize in supplying and maintaining highly trained security guards with a
       </div>
 
       {/* Stats bar */}
-      <div className="absolute bottom-0 left-0  right-0 !bg-white dark:!bg-slate-300 backdrop-blur-md border-t border-gray-200 dark:border-white/5 transition-colors">
+      <div className="absolute bottom-0 left-0  right-0 !bg-white backdrop-blur-md border border-gray-200 dark:border-white/5 transition-colors">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5">
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 text-center">
             {STATS.map(s => (
               <div key={s.label} className="text-center">
                 <div className="font-display text-2xl sm:text-3xl font-bold gradient-text">{s.number}</div>
-                <div className="text-gray-600 dark:text-gray-400 text-xs sm:text-sm font-body mt-1 transition-colors">{s.label}</div>
+                <div className="text-gray-900 dark:text-gray-600 text-xs sm:text-sm font-body mt-1 transition-colors">{s.label}</div>
               </div>
             ))}
           </div>

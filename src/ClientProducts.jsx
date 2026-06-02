@@ -18,7 +18,7 @@ export default function ClientProducts() {
 
       {/* Scrolling cards — right to left */}
       <div className="overflow-hidden">
-        <div className="flex gap-6" style={{ animation: 'marquee 28s linear infinite' }}>
+        <div className="flex gap-6" style={{ animation: 'marquee 50s linear infinite' }}>
           {doubled.map((p, i) => (
             <div key={i} className="flex-shrink-0 w-72 sm:w-80 card-hover cyber-border rounded-2xl overflow-hidden bg-[#0d1b2e]/50 group cursor-pointer">
               <div className="img-overlay h-48">

@@ -8,11 +8,12 @@ import ServicesImg6 from './images/ServiceImg6.jpg';
 import Client1 from './images/Client1.png';
 import Client2 from './images/Client2.jpg';
 import Client3 from './images/Client3.jpg';
-import Client4 from './images/Client5.jpg';
+import Client4 from './images/Client4.jpeg';
 import Client5 from './images/Client5.jpg';
 import Client6 from './images/Client6.jpg';
 import Client7 from './images/Client7.jpg';
-import Client8 from './images/Client3.jpg';
+import Client8 from './images/Client8.jpg';
+import Client9 from './images/Client9.jpeg';
 
 export const STATS = [
   { number: '45+', label: 'Top Companies' },
@@ -64,18 +65,18 @@ export const CLIENTS_PRODUCTS = [
   { title: 'TATA Electronics', category: 'Industrial Security Services', img: Client1 },
   { title: 'TCR Hospital', category: 'Medical Facility Security', img: Client2 },
   { title: 'Ashok Leyland Service Center', category: 'Commercial & Service Center Security', img: Client3 },
-  { title: 'Bakery Delight', category: 'Retail Shop Security', img: Client4 },
+  { title: 'Bakery Delight', category: 'Bakery & Restaurant', img: Client4 },
   { title: 'KFC', category: 'Food Court & Commercial Security', img: Client5 },
   { title: 'ARK Hospital', category: 'Healthcare Security Services', img: Client6 },
   { title: 'RK Hospital', category: 'Hospital Security Management', img: Client7 },
   { title: 'RR Biriyani', category: 'Restaurant & Hospitality Security', img: Client8 },
+  { title: 'Kirubakar & co', category: 'TMT Metal shop', img: Client9 },
 ]
 
 
 
 export const TEAM = [
   { name: 'Alex Morgan', role: 'Chief Security Officer', img: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop&face' },
-  { name: 'Sarah Chen', role: 'Lead Penetration Tester', img: 'https://images.unsplash.com/photo-1494790108755-2616b612b5c5?w=300&h=300&fit=crop&face' },
   { name: 'Marcus Reeves', role: 'Network Architect', img: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=300&h=300&fit=crop&face' },
   { name: 'Priya Nair', role: 'Threat Intelligence Analyst', img: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=300&h=300&fit=crop&face' },
 ]

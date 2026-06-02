@@ -151,3 +151,46 @@ export default function Contact() {
         </section>
     )
 }
+// app/api/contact/route.js
+
+export async function POST(req) {
+    try {
+        const data = await req.json()
+
+        const transporter = nodemailer.createTransport({
+            service: 'gmail',
+            auth: {
+                user: 'Sureshkumarrsde@gmail.com',
+                pass: 'skr54255@SK',
+            },
+        })
+
+        await transporter.sendMail({
+            from: data.email,
+            to: 'ksgsantharaj@gmail.com',
+            subject: 'New Contact Form Submission',
+            html: `
+                <h2>New Contact Request</h2>
+                <p><strong>Name:</strong> ${data.fullName}</p>
+                <p><strong>Phone:</strong> ${data.phone}</p>
+                <p><strong>Email:</strong> ${data.email}</p>
+                <p><strong>Company:</strong> ${data.companyName}</p>
+                <p><strong>Business:</strong> ${data.businessInfo}</p>
+                <p><strong>Location:</strong> ${data.location}</p>
+            `,
+        })
+
+        return Response.json({
+            success: true,
+            message: 'Email sent successfully',
+        })
+    } catch (error) {
+        return Response.json(
+            {
+                success: false,
+                message: error.message,
+            },
+            { status: 500 }
+        )
+    }
+}
