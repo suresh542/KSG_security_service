@@ -23,7 +23,7 @@ export default function Team() {
             </Link>
           </div>
 
-          <div className="grid grid-cols-2 gap-4">
+          {/* <div className="grid grid-cols-2 gap-4">
             {TEAM.map(member => (
               <div key={member.name} className="card-hover group cursor-pointer">
                 <div className="relative overflow-hidden rounded-2xl">
@@ -40,7 +40,7 @@ export default function Team() {
                 </div>
               </div>
             ))}
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

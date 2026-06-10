@@ -12,7 +12,7 @@ export default function Hero() {
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full blur-3xl" />
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24 w-full mb-5">
+      <div className="max-w-7xl mx-auto px-4 sm:px-2 lg:px-8 py-16 lg:py-24 w-full mb-5">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
 
           {/* Left */}
@@ -40,7 +40,7 @@ export default function Hero() {
           </div>
 
           {/* Right — animated shield */}
-          <div className="flex justify-center lg:justify-end animate-float">
+          <div className="hidden lg:flex justify-center lg:justify-end animate-float ">
             <div className="relative w-72 h-72 sm:w-96 sm:h-96 lg:w-[460px] lg:h-[460px]">
               <div className="absolute inset-0 rounded-full border-2 border-cyber-green/20 animate-spin" style={{ animationDuration: '20s' }} />
               <div className="absolute inset-4 rounded-full border border-cyber-green/10 animate-spin" style={{ animationDuration: '15s', animationDirection: 'reverse' }} />
@@ -66,7 +66,7 @@ export default function Hero() {
       </div>
 
       {/* Stats bar */}
-      <div className="absolute bottom-0 left-0  right-0 !bg-white backdrop-blur-md border border-gray-200 dark:border-white/5 transition-colors">
+      <div className="absolute bottom-0 left-0 pt-2 right-0 !bg-white backdrop-blur-md border border-gray-200 dark:border-white/5 transition-colors">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5">
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 text-center">
             {STATS.map(s => (
