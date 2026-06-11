@@ -220,8 +220,8 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Team */}
-      <section className="py-20 lg:py-28 section-bg hexagon-bg">
+      
+      {/* <section className="py-20 lg:py-28 section-bg hexagon-bg">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16 space-y-4">
             <div className="inline-flex items-center gap-2 text-cyber-green text-sm font-body font-semibold uppercase tracking-widest">
@@ -246,7 +246,7 @@ export default function AboutPage() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* CTA */}
       <section className="py-20 bg-white dark:bg-[#0d1b2e] border-t border-gray-200 dark:border-white/5">

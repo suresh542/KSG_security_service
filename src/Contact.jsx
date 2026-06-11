@@ -1,3 +1,4 @@
+'use client'
 import { useState } from 'react'
 import { Mail, Phone, MapPin, Shield } from 'lucide-react'
 
@@ -35,14 +36,29 @@ export default function Contact() {
                 body: JSON.stringify(formData),
             })
 
-            const result = await response.json()
+            const rawText = await response.text()
+            let result = null
+            if (rawText) {
+                try {
+                    result = JSON.parse(rawText)
+                } catch (parseError) {
+                    throw new Error(`Server returned invalid JSON: ${parseError.message}`)
+                }
+            }
+
             if (!response.ok) {
-                throw new Error(result.message || 'Unable to send message')
+                const message = result?.message || `Server error: ${response.status}`
+                throw new Error(message)
+            }
+
+            if (!result?.success) {
+                throw new Error(result?.message || 'Unable to send message')
             }
 
             setStatus({ submitting: false, message: 'Message sent successfully. We will contact you soon.', error: '' })
             setFormData({ fullName: '', phone: '', email: '', companyName: '', businessInfo: '', location: '' })
         } catch (error) {
+            console.error('Form submission error:', error)
             setStatus({ submitting: false, message: '', error: error.message || 'Failed to send message.' })
         }
     }
@@ -150,47 +166,4 @@ export default function Contact() {
             </div>
         </section>
     )
-}
-// app/api/contact/route.js
-
-export async function POST(req) {
-    try {
-        const data = await req.json()
-
-        const transporter = nodemailer.createTransport({
-            service: 'gmail',
-            auth: {
-                user: 'Sureshkumarrsde@gmail.com',
-                pass: 'skr54255@SK',
-            },
-        })
-
-        await transporter.sendMail({
-            from: data.email,
-            to: 'ksgsantharaj@gmail.com',
-            subject: 'New Contact Form Submission',
-            html: `
-                <h2>New Contact Request</h2>
-                <p><strong>Name:</strong> ${data.fullName}</p>
-                <p><strong>Phone:</strong> ${data.phone}</p>
-                <p><strong>Email:</strong> ${data.email}</p>
-                <p><strong>Company:</strong> ${data.companyName}</p>
-                <p><strong>Business:</strong> ${data.businessInfo}</p>
-                <p><strong>Location:</strong> ${data.location}</p>
-            `,
-        })
-
-        return Response.json({
-            success: true,
-            message: 'Email sent successfully',
-        })
-    } catch (error) {
-        return Response.json(
-            {
-                success: false,
-                message: error.message,
-            },
-            { status: 500 }
-        )
-    }
 }

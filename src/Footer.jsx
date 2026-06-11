@@ -32,14 +32,29 @@ export default function Footer() {
         body: JSON.stringify(formData),
       })
 
-      const result = await response.json()
+      const rawText = await response.text()
+      let result = null
+      if (rawText) {
+        try {
+          result = JSON.parse(rawText)
+        } catch (parseError) {
+          throw new Error(`Server returned invalid JSON: ${parseError.message}`)
+        }
+      }
+
       if (!response.ok) {
-        throw new Error(result.message || 'Unable to send message')
+        const message = result?.message || `Server error: ${response.status}`
+        throw new Error(message)
+      }
+
+      if (!result?.success) {
+        throw new Error(result?.message || 'Unable to send message')
       }
 
       setStatus({ submitting: false, message: 'Message sent successfully. We will contact you soon.', error: '' })
       setFormData({ fullName: '', phone: '', email: '', companyName: '', businessInfo: '', location: '' })
     } catch (error) {
+      console.error('Footer form submission error:', error)
       setStatus({ submitting: false, message: '', error: error.message || 'Failed to send message.' })
     }
   }

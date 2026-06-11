@@ -6,7 +6,7 @@ export default function Team() {
   return (
     <section className="py-20 lg:py-28 section-bg hexagon-bg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className=" gap-12 items-center">
           <div className="space-y-6">
             <div className="inline-flex items-center gap-2 text-cyber-green text-lg sm:text-xl lg:text-2xl xl:text-3xl font-body font-semibold uppercase tracking-widest">
               <span className="w-8 h-0.5 bg-cyber-green" /> Our Experts
@@ -18,9 +18,11 @@ export default function Team() {
             <p className="font-body text-gray-600 dark:text-gray-300 leading-relaxed">
               Our team comprises battle-tested cybersecurity veterans with decades of combined experience defending organizations from the world's most sophisticated threats.
             </p>
-            <Link to="/about" className="inline-flex items-center gap-2 px-8 py-4 rounded-lg font-body font-semibold text-[#0a0e1a] bg-gradient-to-r from-cyber-green to-blue-400 hover:scale-105 transition-all glow-green">
+            <div className="flex justify-center items-center">
+            <Link to="/about" className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-lg font-body font-semibold text-[#0a0e1a] bg-gradient-to-r from-cyber-green to-blue-400 hover:scale-105 transition-all glow-green">
               Meet All Experts <ArrowRight className="w-5 h-5" />
             </Link>
+            </div>
           </div>
 
           {/* <div className="grid grid-cols-2 gap-4">
