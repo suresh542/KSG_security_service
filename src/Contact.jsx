@@ -2,6 +2,9 @@
 import { useState } from 'react'
 import { Mail, Phone, MapPin, Shield } from 'lucide-react'
 
+const BACKEND_URL = 'https://ksg-security-backend-kri.vercel.app/api/contact' // Update with your backend URL
+
+
 const fields = [
     { name: 'fullName', label: 'Full Name', type: 'text', placeholder: 'Your full name' },
     { name: 'phone', label: 'Phone Number', type: 'tel', placeholder: 'Your phone number' },
@@ -11,7 +14,7 @@ const fields = [
 
 export default function Contact() {
     const [formData, setFormData] = useState({
-        fullName: '',
+        fullName: '',   
         phone: '',
         email: '',
         companyName: '',
@@ -20,22 +23,22 @@ export default function Contact() {
     })
     const [status, setStatus] = useState({ submitting: false, message: '', error: '' })
 
-    const handleChange = (event) => {
+  const handleChange = (event) => {
         const { name, value } = event.target
         setFormData((prev) => ({ ...prev, [name]: value }))
     }
-
+ 
     const handleSubmit = async (event) => {
         event.preventDefault()
         setStatus({ submitting: true, message: '', error: '' })
-
+ 
         try {
-            const response = await fetch('/api/contact', {
+            const response = await fetch(BACKEND_URL, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(formData),
             })
-
+            console.log('Raw response:', response)
             const rawText = await response.text()
             let result = null
             if (rawText) {
@@ -45,16 +48,16 @@ export default function Contact() {
                     throw new Error(`Server returned invalid JSON: ${parseError.message}`)
                 }
             }
-
+ 
             if (!response.ok) {
                 const message = result?.message || `Server error: ${response.status}`
                 throw new Error(message)
             }
-
+ 
             if (!result?.success) {
                 throw new Error(result?.message || 'Unable to send message')
             }
-
+ 
             setStatus({ submitting: false, message: 'Message sent successfully. We will contact you soon.', error: '' })
             setFormData({ fullName: '', phone: '', email: '', companyName: '', businessInfo: '', location: '' })
         } catch (error) {
