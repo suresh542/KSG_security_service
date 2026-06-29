@@ -109,17 +109,41 @@ export default function Footer() {
               </h4>
 
               <ul className="space-y-2">
-                {links.map((link) => (
-                  <li key={link}>
-                    <a
-                      href="#"
-                      className="flex items-center gap-1 text-sm text-slate-600 hover:text-slate-900 dark:text-slate-400"
-                    >
-                      <ChevronRight className="w-3 h-3" />
-                      {link}
-                    </a>
-                  </li>
-                ))}
+                {links.map((link) => {
+                  const getLinkPath = (linkText) => {
+                    if (linkText === 'About Us') return '/about'
+                    if (linkText === 'Contact') return '/contact'
+                    return '#'
+                  }
+
+                  const path = getLinkPath(link)
+
+                  if (path !== '#') {
+                    return (
+                      <li key={link}>
+                        <Link
+                          to={path}
+                          className="flex items-center gap-1 text-sm text-slate-600 hover:text-slate-900 dark:text-slate-400"
+                        >
+                          <ChevronRight className="w-3 h-3" />
+                          {link}
+                        </Link>
+                      </li>
+                    )
+                  }
+
+                  return (
+                    <li key={link}>
+                      <a
+                        href="#"
+                        className="flex items-center gap-1 text-sm text-slate-600 hover:text-slate-900 dark:text-slate-400"
+                      >
+                        <ChevronRight className="w-3 h-3" />
+                        {link}
+                      </a>
+                    </li>
+                  )
+                })}
               </ul>
             </div>
           ))}

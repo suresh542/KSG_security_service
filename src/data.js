@@ -118,10 +118,10 @@ export const STATS_BAR = [
 ]
 
 export const SOCIAL = [
-  { icon: Instagram, label: 'Instagram', href: '#' },
+  { icon: Instagram, label: 'Instagram', href: 'https://www.instagram.com/ksg_security_service' },
   { icon: Facebook, label: 'Facebook', href: '#' },
-  { icon: Youtube, label: 'YouTube', href: '#' },
-  { icon: Linkedin, label: 'LinkedIn', href: '#' },
+  // { icon: Whatsapp, label: 'WhatsApp', href: 'https://wa.me/916379191157' },
+  { icon: Linkedin, label: 'LinkedIn', href: 'https://www.linkedin.com/in/gowtham-kumar-2a3614184' },
 ]
 
 export const FOOTER_LINKS = {
