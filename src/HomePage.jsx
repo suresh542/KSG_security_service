@@ -7,6 +7,7 @@ import ClientProducts from './ClientProducts'
 import SkillsGap from './SkillsGap'
 import Feedback from './Feedback'
 import Team from './Team'
+import FAQ from './FAQ'
 
 export default function HomePage() {
   return (
@@ -20,6 +21,7 @@ export default function HomePage() {
       {/* <SkillsGap /> */}
       <Feedback />
       <Team />
+      <FAQ/>
     </>
   )
 }
