@@ -116,7 +116,7 @@ export default function FAQ() {
 
 
                 </div>
-                <div className="rounded-3xl mx-auto flex w-full max-w-5xl flex-col gap-4 py-6 sm:py-8 border border-gray-200 bg-gradient-to-br from-cyber-green/10 to-blue-400/10 p-6 shadow-sm dark:border-white/10 dark:bg-gradient-to-br dark:from-cyber-green/20 dark:to-blue-500/20">
+                <div className="rounded-3xl mx-auto flex w-full max-w-5xl flex-col gap-4 py-6 sm:py-8 border border-gray-200  p-6 shadow-sm dark:border-white/10 dark:bg-gradient-to-br dark:from-cyber-green/20 dark:to-blue-500/20">
                     <div className="mb-4 flex items-center gap-2">
                         <Phone className="h-5 w-5 text-cyber-green" />
                         <h3 className="text-xl font-semibold text-gray-900 dark:text-white">Contact Us</h3>
@@ -224,7 +224,7 @@ export default function FAQ() {
                         )}
                     </form>
 
-                    <div className="mt-6 space-y-3 border-t border-gray-200 pt-4 text-sm text-gray-700 dark:border-white/10 dark:text-gray-300">
+                    {/* <div className="mt-6 space-y-3 border-t border-gray-200 pt-4 text-sm text-gray-700 dark:border-white/10 dark:text-gray-300">
                         <a href="mailto:ksgsantharaj@gmail.com" className="flex items-center gap-3 hover:text-cyber-green transition-colors">
                             <Mail className="h-4 w-4" />
                             <span>ksgsantharaj@gmail.com</span>
@@ -237,7 +237,7 @@ export default function FAQ() {
                             <MapPin className="mt-0.5 h-4 w-4" />
                             <span>Krishnagiri, Tamil Nadu 635001</span>
                         </div>
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </section>

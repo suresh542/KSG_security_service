@@ -2,7 +2,7 @@
 import { useState } from 'react'
 import { Mail, Phone, MapPin, Shield } from 'lucide-react'
 
-const BACKEND_URL = 'https://ksg-security-backend-kri.vercel.app/api/contact' // Update with your backend URL
+const BACKEND_URL = import.meta.env.VITE_CONTACT_API_URL || '/api/contact'
 
 
 const fields = [
@@ -38,14 +38,14 @@ export default function Contact() {
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(formData),
             })
-            console.log('Raw response:', response)
+
             const rawText = await response.text()
             let result = null
             if (rawText) {
                 try {
                     result = JSON.parse(rawText)
                 } catch (parseError) {
-                    throw new Error(`Server returned invalid JSON: ${parseError.message}`)
+                    result = { message: rawText }
                 }
             }
  
